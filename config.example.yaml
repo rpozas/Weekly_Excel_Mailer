@@ -1,0 +1,35 @@
+
+# === Weekly Excel Mailer Configuration ===
+
+files:
+  # Path to the source Excel you update each Thursday
+  input_xlsx: "C:/path/to/your/source.xlsx"
+
+  # Where to write the generated file (created if missing)
+  output_dir: "C:/path/to/output"
+
+  # Output name; {date} is YYYYMMDD
+  output_name_pattern: "weekly_report_{date}.xlsx"
+
+email:
+  enabled: true
+
+  # SMTP settings (Gmail example: requires App Password when 2FA is enabled)
+  smtp:
+    host: "smtp.gmail.com"
+    port: 587
+    use_tls: true
+    username: "youraddress@gmail.com"
+    password: "your-app-password"
+
+  from: "youraddress@gmail.com"
+  to: ["recipient1@company.com", "recipient2@company.com"]
+  cc: []
+  bcc: []
+
+  subject: "Weekly XLSX Report"
+  body: |
+    Hola,
+
+    Te envío el reporte semanal en adjunto.
+    Saludos.

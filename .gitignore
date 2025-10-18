@@ -1,0 +1,9 @@
+# Ignorar archivos con credenciales
+config.yaml
+run.log
+
+# Archivos temporales o de salida
+out/
+__pycache__/
+*.pyc
+*.xlsx
